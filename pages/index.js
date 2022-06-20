@@ -1,5 +1,10 @@
 //components
 import Header from '../components/Header'
+import PortfolioChart from '../components/PortfolioChart'
+import BuyTokens from '../components/BuyTokens'
+import Notice from '../components/Notice'
+import Assets from '../components/Assets'
+
 
 //Icons
 import { BiDotsHorizontalRounded } from 'react-icons/bi' 
@@ -42,7 +47,7 @@ export default function Home() {
             </div>
           </div>  
           <div className={styles.chartContainer}>
-              {/* portfolioChart */}
+              <PortfolioChart/>
           </div>
         <div className={styles.buyingPowerContainer}>
             <div className={styles.buyingPowerTitle}>Buying Power</div>
@@ -54,9 +59,9 @@ export default function Home() {
             <div className={styles.noticeMessage}>
               Transfer your funds here.
             </div>
-              {/* <Buy Tokens/> */}
+              <BuyTokens/> 
           </div>
-          {/* <Notice /> */}
+          <Notice/>
         </div>
       </div>
       <div className={styles.rightMain}>
@@ -65,7 +70,10 @@ export default function Home() {
           <BiDotsHorizontalRounded className={styles.moreOptions} />         
         </div>
         {/* Map throught coins and coins are assert components */}
-        {/* <Assert /> */}
+          <Assets coin={"BTC"} price = {0.89}/>
+          <Assets coin={"SOL"} price = {-9}/>
+          <Assets coin={"ETH"} price = {65}/>
+          <Assets coin={"CAD"} price = {89}/>
         <div className={styles.rightMainItem}>
             <div className={styles.ItemTitle}>Lists</div>
             <AiOutlinePlus className={styles.moreOptionse} />

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from 'next/image'
+import Logo from '../assets/Logo.png'
 import { AiOutlineSearch} from 'react-icons/ai'
 
 const styles = {
@@ -22,7 +23,7 @@ const Header = () => {
     return (
         <div className={styles.container}>
             <div className={styles.leftHeader}>
-                {/*Image */}
+                <Image src={Logo} height = {100} width = {100} className={styles.logo}/>
             </div>
             <div className={styles.searchWrapper}>
                 <div className={styles.searchInputContainer}>
