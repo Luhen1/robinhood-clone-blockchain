@@ -9,7 +9,6 @@ const createUser = (req, res) => {
             _id: req.body.walletAddress,
             userName: 'Unnamed',
             address: req.body.walletAddress,
-
         }
     } catch (error) {
         res.status(500).send({ message: 'error', data: error.message})
