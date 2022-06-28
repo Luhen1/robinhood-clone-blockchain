@@ -2,7 +2,7 @@
 
 import { client } from './../lib/sanityClient'
 
-const createUser = (req, res) => {
+const createUser = async (req, res) => {
     try {
         const userDoc = {
             _type: 'users',
@@ -10,9 +10,12 @@ const createUser = (req, res) => {
             userName: 'Unnamed',
             address: req.body.walletAddress,
         }
+        
+        await client.createIfNotExists(userDoc)
+        
     } catch (error) {
         res.status(500).send({ message: 'error', data: error.message})
     }
-}
+} 
 
 export default createUser
